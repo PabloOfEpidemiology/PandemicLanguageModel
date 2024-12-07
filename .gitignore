@@ -1,0 +1,59 @@
+# 1. Ignore all directories named "Old" at any depth
+Old/
+**/Old/
+
+# 2. Ignore all directories named "cache" at any depth
+cache/
+**/cache/
+
+# 3. Ignore specific directories within Genetic_markers_preprocessing
+# Since .gitignore is at the repo root, paths are relative to it
+
+# Ignore 'Simulations/24thNov' and 'slurm_scripts' (and others) inside 'Genetic_markers_preprocessing'
+Genetic_markers_preprocessing/Simulations/24thNov/
+Genetic_markers_preprocessing/slurm_scripts/
+
+#Ignore all the large files in the Input_data subdirectory
+Genetic_markers_preprocessing/Input_data/*
+!Genetic_markers_preprocessing/Input_data/
+!Genetic_markers_preprocessing/Input_data/**/*.py
+!Genetic_markers_preprocessing/Input_data/**/*.sh
+!Genetic_markers_preprocessing/Input_data/**/*.R
+!Genetic_markers_preprocessing/Input_data/**/*.pdf
+!Genetic_markers_preprocessing/Input_data/**/*.png
+
+
+# 4. Handle Haplotypes Directory
+# Ignore everything in Haplotypes except directories containing '24A' or '22B'
+
+# Ignore all contents in Haplotypes
+Genetic_markers_preprocessing/Haplotypes/*
+
+# Do not ignore the Haplotypes directory itself
+#!Genetic_markers_preprocessing/Haplotypes/
+
+# Do not ignore directories containing '24A' or '22B' in Haplotypes
+#!Genetic_markers_preprocessing/Haplotypes/*24A*/
+#!Genetic_markers_preprocessing/Haplotypes/*22B*/
+
+#Genetic_markers_preprocessing/Haplotypes/*/*
+
+# Allow the specific metadata file
+#!Genetic_markers_preprocessing/Haplotypes/*/*metadata_representative_all_countries_with_date.txt
+
+# 5. Ignore log files
+*.log
+
+# 6. Ignore temporary files
+tmp/
+
+# 7. Ignore specific file types
+*.bin
+*.dat
+*.out
+
+
+# 8. Ignore Phylogenetic files for now
+Phylogenetic_tree_preprocessing/
+
+Genetic_markers_preprocessing/Simulations/*.csv
