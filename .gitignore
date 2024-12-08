@@ -32,10 +32,18 @@ Genetic_markers_preprocessing/Haplotypes/*
 !Genetic_markers_preprocessing/Haplotypes/
 
 # Do not ignore directories containing '24A' or '22B' in Haplotypes
-!Genetic_markers_preprocessing/Haplotypes/24A_Spike_Global_8769/Global_8769_metadata_representative_all_countries_with_date.txt
-#!Genetic_markers_preprocessing/Haplotypes/*22B*/
+!Genetic_markers_preprocessing/Haplotypes/24A*/
+!Genetic_markers_preprocessing/Haplotypes/22B*/
 
-#Genetic_markers_preprocessing/Haplotypes/*/*
+# But ignore everything in those directories
+Genetic_markers_preprocessing/Haplotypes/24A*/*
+Genetic_markers_preprocessing/Haplotypes/22B*/*
+
+
+# Except the specific metadata files
+!Genetic_markers_preprocessing/Haplotypes/24A*/*metadata_representative_all_countries_with_date.txt
+!Genetic_markers_preprocessing/Haplotypes/22B*/*metadata_representative_all_countries_with_date.txt
+
 
 # Allow the specific metadata file
 #!Genetic_markers_preprocessing/Haplotypes/*/*metadata_representative_all_countries_with_date.txt
