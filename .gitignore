@@ -10,7 +10,6 @@ cache/
 # Since .gitignore is at the repo root, paths are relative to it
 
 # Ignore 'Simulations/24thNov' and 'slurm_scripts' (and others) inside 'Genetic_markers_preprocessing'
-Genetic_markers_preprocessing/Simulations/24thNov/
 Genetic_markers_preprocessing/slurm_scripts/
 
 #Ignore all the large files in the Input_data subdirectory
@@ -29,11 +28,11 @@ Genetic_markers_preprocessing/Input_data/*
 # Ignore all contents in Haplotypes
 Genetic_markers_preprocessing/Haplotypes/*
 
-# Do not ignore the Haplotypes directory itself
-#!Genetic_markers_preprocessing/Haplotypes/
+#Do not ignore the Haplotypes directory itself
+!Genetic_markers_preprocessing/Haplotypes/
 
 # Do not ignore directories containing '24A' or '22B' in Haplotypes
-#!Genetic_markers_preprocessing/Haplotypes/*24A*/
+!Genetic_markers_preprocessing/Haplotypes/24A_Spike_Global_8769/Global_8769_metadata_representative_all_countries_with_date.txt
 #!Genetic_markers_preprocessing/Haplotypes/*22B*/
 
 #Genetic_markers_preprocessing/Haplotypes/*/*
@@ -53,7 +52,3 @@ tmp/
 *.out
 
 
-# 8. Ignore Phylogenetic files for now
-Phylogenetic_tree_preprocessing/
-
-Genetic_markers_preprocessing/Simulations/*.csv
