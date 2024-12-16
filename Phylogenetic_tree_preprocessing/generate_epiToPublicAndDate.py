@@ -14,7 +14,7 @@ import pandas as pd
 # In[2]:
 
 
-gisaid_meta = pd.read_csv("results/gisaid/metadata_2022_08_08.tsv.gz", sep="\t")
+gisaid_meta = pd.read_csv("results/metadata.tsv.gz", sep="\t")
 
 
 # In[3]:
@@ -46,7 +46,7 @@ epi_map
 
 
 epi_map.to_csv(
-    "results/gisaid/epiToPublicAndDate.latest", header=False, sep="\t", index=False
+    "results/epiToPublicAndDate.latest", header=False, sep="\t", index=False
 )
 
 

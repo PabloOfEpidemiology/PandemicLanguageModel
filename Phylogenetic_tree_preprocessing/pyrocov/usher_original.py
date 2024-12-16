@@ -144,8 +144,8 @@ def refine_mutation_tree(filename_in: str, filename_out: str) -> Dict[str, str]:
             fine_to_coarse.setdefault(clade_to_fine[child], parent_coarse)
 
     ## TOO BIG TO SAVE ##
-    with open(filename_out, "wb") as f:
-        f.write(proto.SerializeToString())    
+    # with open(filename_out, "wb") as f:
+    #     f.write(proto.SerializeToString())    
 
     logger.info(f"Found {len(clades) - len(fine_to_coarse)} clones")
     logger.info(f"Refined {len(set(fine_to_coarse.values()))} -> {len(fine_to_coarse)}")

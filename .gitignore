@@ -1,3 +1,5 @@
+# Ignore for Genetic_marker subd
+
 # 1. Ignore all directories named "Old" at any depth
 Old/
 **/Old/
@@ -60,3 +62,14 @@ tmp/
 *.out
 
 
+
+
+# Ignore for Phylogenetic subd
+
+# Ignore directories
+Phylogenetic_tree_preprocessing/slurm_scripts/
+
+Phylogenetic_tree_preprocessing/results/
+
+# Ignore individual files
+Phylogenetic_tree_preprocessing/preprocessed_data.pkl
